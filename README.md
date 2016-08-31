@@ -1,26 +1,13 @@
-___Tarea 01. Diferencia entre los comandos:___
+#   *__Tarea N°. 2__*
+##   *Aplicaciones Móviles*
+##   *Ana Gabriela García Páramo*
 
-    git reset --mixed (commit)    
-    git reset --soft (commit)  
+---
+___Tarea:___  _Para qué nos sirve git rebase y sus aplicaciones en un pull request._ 
 
-___
+---
+Para realizar la unión de ramas en Git existen dos maneras de realizarlo, ___marge___ y ___rebase___. Cuando se utiliza _rebase_, git duplica uno a uno todos los cambios realizados en la rama de trabajo y los lleva hacia la rama donde se requieren unir, los ubica uno tras otros en el orden que se crearon.  
 
-En un proyecto (en git), existen algunas maneras para regresar a un estado anterior. A continuación se hace mención de estos comandos que nos permiten realizar la acción anterior:  
+_Rebase_ es una herramienta muy útil al momento de unir ramas ya que evitamos conflictos, un punto muy importante es que funciona siempre y cuando se realice con commits que no son públicos. ___Pull request___ nos permite realizar una petición para integrar nuestros cambios de código en algún proyecto que se encuentre en etapa de desarrollo.  
 
-___Hard:___   git reset --hard (commit)  
-* Ignora por completo todos los cambios que se han realizado (los commits más nuevos).  
-* Reestablece el indice y la rama del trabajo al punto donde se encontraban.  
-
-___Soft:___   git reset --soft (commit)  
-* No deshace el estado actual del proyecto para regresar a un punto específico.
-* Cuando se utiliza este comando, todos los archivos que pertenecen a commits anteriores se quedan en "stage" para alguna oeración extra que se desee realizar.  
-
-___Mixed:___    git reset --mixed (commit)  
-* Actua e forma similar o parecida a soft.
-* Una de las diferencias respecto a soft es que los cambios no se quedan en el "stage".
-* Git usa por defecto este comando cuando no se asigna una bandera (hard, soft, mixed).  
-
-Los comandos anteriormente mencionados nos permiten reestablecer un proyecto a estados anteriores, puede ser de manera parcial o total dependiendo la circunstancia. 
- 
-
-    
+_Pull request_ es una herramienta de mucha utilidad cuando trabajamos en equipo pues se debe tener más precaución y es ahí cuando comienza su uso, dado que, en cada ocasión que se realice un cambio lo ideal es subir al repositorio la nueva rama y aquí es donde entra en el juego _git rebase_ para realizar la unión de las ramas. De esta manera se puede obtener de forma más detallada lo que hace el código, así, quien sea el encargado de la integración del proyecto pueda descargar la rama, realizar pruebas a los cambios y aprobar a rechazar la petición, además de realizar comentarios para futuras modificaciones.
